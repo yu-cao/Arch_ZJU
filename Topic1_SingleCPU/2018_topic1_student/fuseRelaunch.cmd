@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/DELL/Desktop/2018_topic1_student/2018_topic1_student/sim_mips_isim_beh.exe" -prj "C:/Users/DELL/Desktop/2018_topic1_student/2018_topic1_student/sim_mips_beh.prj" "work.sim_mips" "work.glbl" 
