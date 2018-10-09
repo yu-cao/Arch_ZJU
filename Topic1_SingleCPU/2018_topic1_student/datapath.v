@@ -99,8 +99,13 @@ module datapath (
 		else if (cpu_en) begin
 			case (pc_src_ctrl)
 				PC_JUMP: inst_addr <= {inst_addr[31:28],inst_data_ctrl[25:0],2'b0};
-				PC_JR: inst_addr <= data_rs;				
-				PC_BNE: inst_addr <= alu_out;
+				PC_JR: inst_addr <= data_rs;
+				PC_BNE: if (rs_rt_equal) begin
+				            inst_addr <= inst_addr + 4;
+				end
+				else begin
+					inst_addr <= alu_out;
+				end
 				default: inst_addr <= inst_addr + 4;
 			endcase
 		end
